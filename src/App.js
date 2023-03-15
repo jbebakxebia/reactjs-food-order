@@ -19,7 +19,7 @@ function hideCartHandler() {
   return (
     <CartProvider>
       {cartIsShown} && <div>Cart...</div>
-      <Cart></Cart>
+      <Cart onClose={hideCartHandler}></Cart>
       <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
